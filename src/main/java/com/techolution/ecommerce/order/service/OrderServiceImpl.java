@@ -4,7 +4,6 @@ import com.techolution.ecommerce.order.dto.request.OrderRequestDto;
 import com.techolution.ecommerce.order.dto.request.OrderUpdateRequestDto;
 import com.techolution.ecommerce.order.exception.OrderNotFoundException;
 import com.techolution.ecommerce.order.model.Order;
-import com.techolution.ecommerce.order.model.OrderStatus;
 import com.techolution.ecommerce.order.model.OrderStatusFactory;
 import com.techolution.ecommerce.order.repository.OrderRepository;
 import org.springframework.stereotype.Service;
@@ -87,4 +86,5 @@ public class OrderServiceImpl implements OrderService {
                 .filter(order -> order.getCustomerName().equalsIgnoreCase(customerName))
                 .collect(Collectors.toList());
     }
+
 }

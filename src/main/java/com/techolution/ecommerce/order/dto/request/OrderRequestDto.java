@@ -17,11 +17,12 @@ public class OrderRequestDto {
     @NotNull(message = "Product name is required")
     private String productName;
 
+    @NotNull(message = "Price is required")
+    @Min(value = 0, message = "Price must be non-negative")
+    private Double price;
+
     @NotNull(message = "Quantity is required")
     @Min(value = 1, message = "Quantity must be greater than 0")
     private Integer quantity;
 
-    @NotNull(message = "Price is required")
-    @Min(value = 0, message = "Price must be non-negative")
-    private Double price;
 }
